@@ -14,7 +14,7 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="mx-auto">
-                            <Nav.Link as={Link} to="/">home</Nav.Link>
+                            <Nav.Link as={Link} to="/">Home</Nav.Link>
                             <Nav.Link as={Link} to="/services">Services</Nav.Link>
                             <Nav.Link as={Link} to="/about">About</Nav.Link>
                             <Nav.Link as={Link} to="/contact-us">Contact Us</Nav.Link>
@@ -37,8 +37,9 @@ const Header = () => {
       </NavDropdown> */}
                         </Nav>
                         <Nav>
-                            <Nav.Link as={Link} to="/profile">{user.displayName}</Nav.Link>
-                            <Nav.Link as={Link} eventKey={2} to="/profile">
+                            <Nav.Link as={Link} to={`/user/${user.displayName}/Appointment`}>Appointment</Nav.Link>
+                            <Nav.Link as={Link} to={`/user/${user.displayName}`}>{user.displayName}</Nav.Link>
+                            <Nav.Link as={Link} eventKey={2} to={`/user/${user.displayName}`}>
                                 {/* conditional rendering */}
                                 {!user.displayName ? <i className="far fa-user"></i> :
                                     <img className='w-25' src={user.photoURL} alt="profile" style={{ borderRadius: '50%' }} />}
