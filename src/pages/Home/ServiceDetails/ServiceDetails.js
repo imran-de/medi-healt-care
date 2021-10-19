@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useParams } from 'react-router';
 import useAuth from '../../../hooks/useAuth';
 import Footer from '../../shared/Footer/Footer';
