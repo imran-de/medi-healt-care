@@ -40,8 +40,8 @@ const Header = () => {
                             <Nav.Link as={Link} to="/profile">{user.displayName}</Nav.Link>
                             <Nav.Link as={Link} eventKey={2} to="/profile">
                                 {/* conditional rendering */}
-                                {!user.displayName ? <i class="far fa-user"></i> :
-                                    <img className='h-14 rounded-full' src={user.photoURL} alt="profile" />}
+                                {!user.displayName ? <i className="far fa-user"></i> :
+                                    <img className='w-25' src={user.photoURL} alt="profile" style={{ borderRadius: '50%' }} />}
                             </Nav.Link>
                         </Nav>
                     </Navbar.Collapse>

@@ -54,10 +54,10 @@ const Login = () => {
                                     className="btn btn-primary d-inline m-2"
                                     type="submit"
                                 >
-                                    <i class="fas fa-sign-in-alt"></i> Login
+                                    <i className="fas fa-sign-in-alt"></i> Login
                                 </button>
                                 <Link to='/registration' className="btn btn-outline-primary m-2">
-                                    <i class="fab fa-staylinked"></i> Sign-up
+                                    <i className="fab fa-staylinked"></i> Sign-up
                                 </Link>
                             </div>
                             <div className="my-2 flex flex-row justify-center">

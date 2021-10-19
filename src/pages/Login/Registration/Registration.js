@@ -87,13 +87,13 @@ const Registration = () => {
                                         className="btn btn-outline-primary"
                                         type="submit"
                                     >
-                                        <i class="fab fa-staylinked"></i>  Register Account
+                                        <i className="fab fa-staylinked"></i>  Register Account
                                     </button>
                                 </div>
                                 <hr className="mb-6 border-t" />
                                 <div className="text-center">
                                     <Link
-                                        className="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
+                                        className="btn btn-outline-primary"
                                         to="/login"
                                     >
                                         Already have an account? Login!

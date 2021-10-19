@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "Heart",
+        "icon": "<i class='fas fa-heartbeat'></i>",
+        "description": "Our team of cardiologists and cardiothoracic surgeons are trained at the top institutes in India and abroad and are completely dedicated to the treatment for coronary heart diseases. Our pioneering work for the prevention and treatment of cardiac diseases has led to the achievement of better outcomes and improved quality of life for thousands of cardiac patients who visit us each year with complex heart problems. "
+    },
+    {
+        "id": 2,
+        "name": "Orthopedics",
+        "icon": "<i class='fas fa-bone'></i>",
+        "description": "We have dedicated & well equipped Orthopedic surgery complexes with laminar flow & various modern equipment like image intensifier, operating microscope, computer navigation system, top of the line arthroscopy system etc."
+    },
+    {
+        "id": 3,
+        "name": "SPINE",
+        "icon": "<i class='fas fa-circle-notch'></i>",
+        "description": "The spine surgeons perform major and complex spine surgery. Apollo Hospitals is indeed a pioneer and one of the foremost institutions for spine surgery. The spine surgery units at the various Apollo Hospitals locations are a conglomeration of spine specialists in the treatment of spinal disorders, cancers,  deformities as well as specialists in the areas of pain management and physiotherapy"
+    },
+    {
+        "id": 4,
+        "name": "NEUROLOGY AND NEUROSURGERY",
+        "icon": "<i class='fas fa-brain'></i>",
+        "description": "Neurosurgery a branch of surgery involved with the brain injury, spine and nerves, is a key specialty at Apollo hospitals. Our neurosurgery doctors treat neurological diseases such as brain injury or diseases, head injury, spinal injury, brain tumors, spinal tumors, brain hemorrhage, hydrocephalus, nerve injuries, tumors, disc prolapse or herniation, spinal dislocation, unstable spine, congenital malformations like atlanto-axial dislocation, spinal dysraphism etc."
+    },
+    {
+        "id": 5,
+        "name": "Gastroenterology",
+        "icon": "<i class='fas fa-child'></i>",
+        "description": "Gastroenterology essentially addresses diseases of the esophagus, stomach, small intestine, colon and rectum, pancreas, gallbladder, bile ducts and liver. The functioning of the entire digestive system, both related to the passage of food through the digestive canal to the physiological processes of food digestion, absorption and elimination come under the purview of this specialty."
+    },
+    {
+        "id": 6,
+        "name": "Transplants",
+        "icon": "<i class='fas fa-lungs-virus'></i>",
+        "description": "To the thousands of patients who visit for cancer treatment in India, the Apollo Hospitals Cancer Centre symbolizes hope that Cancer is Conquerable. The Cancer care system at Apollo Hospitals involves over 125 surgical and radiation Oncology specialists as well as diagnostic consultants that offer comprehensive Cancer Care. The mission is to take the fight against cancer to the next frontier, and redefine clinical benchmarks and outcomes."
+    }
+]

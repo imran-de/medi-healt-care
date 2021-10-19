@@ -11,7 +11,7 @@ const Timeline = () => {
                             <div className="row w-100 px-5">
                                 <h2 className="text-uppercase">Open Hours</h2>
                                 <div className="col-3">
-                                    <i class="display-4 far fa-clock"></i>
+                                    <i className="display-4 far fa-clock"></i>
                                 </div>
                                 <div className="col-9">
                                     <p className="d-flex justify-content-between"><span>Monday - Friday</span> <span>9am - 10pm</span></p>
@@ -28,7 +28,7 @@ const Timeline = () => {
                             <div className="row w-100 px-5">
                                 <h2 className="text-uppercase">Appointment</h2>
                                 <div className="col-3">
-                                    <i class="display-4 fas fa-medkit"></i>
+                                    <i className="display-4 fas fa-medkit"></i>
                                 </div>
                                 <div className="col-9">
                                     <p>Appointment are available, call us today or book a appoinment</p>
@@ -44,7 +44,7 @@ const Timeline = () => {
                             <div className="row w-100 px-5">
                                 <h2 className="text-uppercase">ONLINE BILL SYSTEM</h2>
                                 <div className="col-3">
-                                    <i class="display-4 fas fa-dollar-sign"></i>
+                                    <i className="display-4 fas fa-dollar-sign"></i>
                                 </div>
                                 <div className="col-9">
                                     <p>You can pay bill by Online, using credit, debit or any other MFS payments systems</p>

@@ -11,7 +11,12 @@ const useFirebase = () => {
     const [isLoading, setIsLoading] = useState(true)
     const [msg, setMsg] = useState('')
 
-
+    const [servicesData, setServicesData] = useState('')
+    useEffect(() => {
+        fetch('./homepageServices.json')
+            .then(res => res.json())
+            .then(data => setServicesData(data))
+    }, [])
     //Login user with google account
     const signInWithGoogle = () => {
         const provider = new GoogleAuthProvider()
@@ -79,6 +84,8 @@ const useFirebase = () => {
     }, [])
 
     return {
+
+        servicesData,
         user,
         isLoading,
         msg,
@@ -86,6 +93,7 @@ const useFirebase = () => {
         makeUserWithEmailAndPassword,
         logInWithEmailAndPassword,
         logOut
+
     }
 }
 
