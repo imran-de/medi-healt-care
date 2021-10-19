@@ -17,7 +17,7 @@ const ServiceDetails = () => {
             <div className="container my-5">
                 <div>
                     <div className="text-center">
-                        <img src={found.icon} alt="" style={{ height: "400px" }} />
+                        <img className="img-fluid" src={found.icon} alt="" style={{ height: "400px" }} />
                     </div>
                     <h1>{found.name}</h1>
                     <p>{found.description}</p>
