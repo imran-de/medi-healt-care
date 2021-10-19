@@ -15,9 +15,7 @@ const Services = () => {
             <div className="text-center my-5">
                 <h2>We Specialize In</h2>
                 <p><u>Our special expert team provide service more than decade</u></p>
-                <div
-                    dangerouslySetInnerHTML={{ __html: services?.icon }}
-                ></div>
+
             </div>
             <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
 
