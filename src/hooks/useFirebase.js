@@ -88,9 +88,11 @@ const useFirebase = () => {
 
     //LogOut user
     const logOut = () => {
+        setIsLoading(true)
         signOut(auth).then(() => {
             setUser({})
             setMsg('')
+            setIsLoading(false)
         }).catch(error => {
             setMsg(error.message)
         })
@@ -99,12 +101,15 @@ const useFirebase = () => {
     //collect data from current login user
     useEffect(() => {
         setIsLoading(true)
-        onAuthStateChanged(auth, user => {
+        const unsubscribed = onAuthStateChanged(auth, user => {
             if (user) {
                 setUser(user)
-                setIsLoading(false)
+            } else {
+                setUser({})
             }
+            setIsLoading(false)
         })
+        return () => unsubscribed;
     }, [])
 
     return {

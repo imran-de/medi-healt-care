@@ -32,7 +32,7 @@ const Footer = () => {
                         </h2>
 
                         <div className="pt-4">
-                            <ul class="nav flex-column">
+                            <ul className="nav flex-column">
                                 <li className="nav-item">
                                     <Link className="nav-link active" to="/">Home</Link>
                                 </li>
