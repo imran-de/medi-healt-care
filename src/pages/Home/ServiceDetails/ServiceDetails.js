@@ -14,9 +14,11 @@ const ServiceDetails = () => {
     return (
         <div>
             <Header />
-            <div className="container">
+            <div className="container my-5">
                 <div>
-                    <div className="card-img-top display-1 text-primary" dangerouslySetInnerHTML={{ __html: found?.icon }}></div>
+                    <div className="text-center">
+                        <img src={found.icon} alt="" style={{ height: "400px" }} />
+                    </div>
                     <h1>{found.name}</h1>
                     <p>{found.description}</p>
                 </div>

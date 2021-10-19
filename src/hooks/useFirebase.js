@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import initialAuthentication from "../Firebase/initialAuthentication";
-import { getAuth, signInWithPopup, onAuthStateChanged, GoogleAuthProvider, createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { getAuth, signInWithPopup, onAuthStateChanged, GoogleAuthProvider, createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword, FacebookAuthProvider, GithubAuthProvider, signOut } from "firebase/auth";
 
 //initialize firebase authentication
 initialAuthentication()
@@ -19,7 +19,31 @@ const useFirebase = () => {
     }, [])
     //Login user with google account
     const signInWithGoogle = () => {
+        setIsLoading(true);
         const provider = new GoogleAuthProvider()
+        signInWithPopup(auth, provider)
+            .then(result => {
+                setUser(result.user)
+            }).catch(error => {
+                setMsg(error.message)
+            }).finally(setIsLoading(false))
+    }
+    //sign in with facebook
+    const signInWithFacebook = () => {
+        setIsLoading(true);
+        const provider = new FacebookAuthProvider();
+        signInWithPopup(auth, provider)
+            .then(result => {
+                setUser(result.user)
+            }).catch(error => {
+                setMsg(error.message)
+            }).finally(setIsLoading(false))
+    }
+
+    //sign in with GitHub
+    const signInWithGit = () => {
+        setIsLoading(true);
+        const provider = new GithubAuthProvider()
         signInWithPopup(auth, provider)
             .then(result => {
                 setUser(result.user)
@@ -90,6 +114,8 @@ const useFirebase = () => {
         isLoading,
         msg,
         signInWithGoogle,
+        signInWithFacebook,
+        signInWithGit,
         makeUserWithEmailAndPassword,
         logInWithEmailAndPassword,
         logOut

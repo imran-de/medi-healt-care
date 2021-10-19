@@ -36,13 +36,13 @@ const Header = () => {
         <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
       </NavDropdown> */}
                         </Nav>
-                        <Nav>
-                            <Nav.Link as={Link} to={`/user/${user.displayName}/Appointment`}>Appointment</Nav.Link>
-                            <Nav.Link as={Link} to={`/user/${user.displayName}`}>{user.displayName}</Nav.Link>
+                        <Nav className="align-items-center">
+                            <Nav.Link as={Link} to={`/user/${user?.displayName}/Appointment`}>Appointment</Nav.Link>
+                            <Nav.Link as={Link} to={`/user/${user?.displayName}`}>{user.displayName}</Nav.Link>
                             <Nav.Link as={Link} eventKey={2} to={`/user/${user.displayName}`}>
                                 {/* conditional rendering */}
                                 {!user.displayName ? <i className="far fa-user"></i> :
-                                    <img className='w-25' src={user.photoURL} alt="profile" style={{ borderRadius: '50%' }} />}
+                                    <img src={user?.photoURL} alt="profile" style={{ width: "60px", borderRadius: '50%' }} />}
                             </Nav.Link>
                         </Nav>
                     </Navbar.Collapse>

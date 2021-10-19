@@ -10,6 +10,8 @@ import Services from './pages/Services/Services';
 import ServiceDetails from './pages/Home/ServiceDetails/ServiceDetails';
 import Profile from './pages/Admin/Profile/Profile';
 import Appointment from './pages/Admin/Appointment/Appointment';
+import About from './pages/About/About';
+import Contact from './pages/Contact/Contact';
 
 function App() {
   return (
@@ -43,6 +45,12 @@ function App() {
             </PrivateRoute>
             <Route path="/about-us">
 
+            </Route>
+            <Route path="/about">
+              <About></About>
+            </Route>
+            <Route path="/contact-us">
+              <Contact></Contact>
             </Route>
             <Route path="*">
               <NotFound></NotFound>

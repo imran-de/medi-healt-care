@@ -2,37 +2,37 @@
     {
         "id": 1,
         "name": "Heart",
-        "icon": "<i class='fas fa-heartbeat'></i>",
+        "icon": "http://cdn.thinglink.me/api/image/632456060703080450/1024/10/scaletowidth/0/0/1/1/false/true?wait=true",
         "description": "Our team of cardiologists and cardiothoracic surgeons are trained at the top institutes in India and abroad and are completely dedicated to the treatment for coronary heart diseases. Our pioneering work for the prevention and treatment of cardiac diseases has led to the achievement of better outcomes and improved quality of life for thousands of cardiac patients who visit us each year with complex heart problems. "
     },
     {
         "id": 2,
         "name": "Orthopedics",
-        "icon": "<i class='fas fa-bone'></i>",
+        "icon": "https://www.southeasthealth.org/wp-content/uploads/2016/05/Orthopedics_530x280.jpg",
         "description": "We have dedicated & well equipped Orthopedic surgery complexes with laminar flow & various modern equipment like image intensifier, operating microscope, computer navigation system, top of the line arthroscopy system etc."
     },
     {
         "id": 3,
         "name": "SPINE",
-        "icon": "<i class='fas fa-circle-notch'></i>",
+        "icon": "https://sanghamitrahospitals.com/wp-content/uploads/2020/04/spine-surgery.jpg",
         "description": "The spine surgeons perform major and complex spine surgery. Apollo Hospitals is indeed a pioneer and one of the foremost institutions for spine surgery. The spine surgery units at the various Apollo Hospitals locations are a conglomeration of spine specialists in the treatment of spinal disorders, cancers,  deformities as well as specialists in the areas of pain management and physiotherapy"
     },
     {
         "id": 4,
         "name": "NEUROLOGY AND NEUROSURGERY",
-        "icon": "<i class='fas fa-brain'></i>",
+        "icon": "https://www.blogsbycategory.com/wp-content/uploads/2018/09/NEUROLOGICAL-SYMPTOMS.jpg",
         "description": "Neurosurgery a branch of surgery involved with the brain injury, spine and nerves, is a key specialty at Apollo hospitals. Our neurosurgery doctors treat neurological diseases such as brain injury or diseases, head injury, spinal injury, brain tumors, spinal tumors, brain hemorrhage, hydrocephalus, nerve injuries, tumors, disc prolapse or herniation, spinal dislocation, unstable spine, congenital malformations like atlanto-axial dislocation, spinal dysraphism etc."
     },
     {
         "id": 5,
         "name": "Gastroenterology",
-        "icon": "<i class='fas fa-child'></i>",
+        "icon": "https://www.startus.cc/sites/default/files/styles/company_profile_cover/public/bg1_2.png?itok=EJyqKeef",
         "description": "Gastroenterology essentially addresses diseases of the esophagus, stomach, small intestine, colon and rectum, pancreas, gallbladder, bile ducts and liver. The functioning of the entire digestive system, both related to the passage of food through the digestive canal to the physiological processes of food digestion, absorption and elimination come under the purview of this specialty."
     },
     {
         "id": 6,
         "name": "Transplants",
-        "icon": "<i class='fas fa-lungs-virus'></i>",
+        "icon": "https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1439,w_2560,x_0,y_0/dpr_2.0/c_limit,w_740/fl_lossy,q_auto/v1492190036/cheats/2014/01/13/first-womb-transplants-a-success/140113-womb-transplant-cheat_sf609f",
         "description": "To the thousands of patients who visit for cancer treatment in India, the Apollo Hospitals Cancer Centre symbolizes hope that Cancer is Conquerable. The Cancer care system at Apollo Hospitals involves over 125 surgical and radiation Oncology specialists as well as diagnostic consultants that offer comprehensive Cancer Care. The mission is to take the fight against cancer to the next frontier, and redefine clinical benchmarks and outcomes."
     }
 ]

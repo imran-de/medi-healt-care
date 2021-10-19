@@ -7,7 +7,7 @@ import Header from '../../shared/Header/Header';
 import { useForm } from "react-hook-form";
 
 const Login = () => {
-    const { signInWithGoogle, msg, logInWithEmailAndPassword, user } = useAuth();
+    const { signInWithGoogle, signInWithFacebook, signInWithGit, msg, logInWithEmailAndPassword, user } = useAuth();
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
         logInWithEmailAndPassword(data)
@@ -69,11 +69,11 @@ const Login = () => {
                                     <i className="fab fa-google pe-3"></i>
                                     Sign-in with Google
                                 </button>
-                                <button className="d-block btn btn-outline-primary">
+                                <button onClick={signInWithFacebook} className="d-block btn btn-outline-primary">
                                     <i className="fab fa-facebook-square pe-3"></i>
                                     Sign-in with Facebook
                                 </button>
-                                <button className="d-block btn btn-outline-dark">
+                                <button onClick={signInWithGit} className="d-block btn btn-outline-dark">
                                     <i className="fab fa-github pe-3"></i>
                                     Sign-in with Github
                                 </button>
