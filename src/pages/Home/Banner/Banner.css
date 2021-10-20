@@ -2,3 +2,13 @@
     height: 600px;
     width: 100%;
 }
+.slider-caption{
+    background-color: rgba(0, 0, 0, 0.63);
+}
+
+@media screen and (max-width: 992px){
+    .slide-img{
+        height: 400px;
+        width: 100%;
+    } 
+}

@@ -1,26 +1,36 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
-import useAuth from '../../../hooks/useAuth';
 import Footer from '../../shared/Footer/Footer';
 import Header from '../../shared/Header/Header';
 
 const ServiceDetails = () => {
     const { id, serviceName } = useParams()
-    const { servicesData } = useAuth()
 
-    const found = servicesData ? servicesData?.find(service => service?.id == id) : '';
+    const [services, setServices] = useState([])
+    const [singleService, setSingleService] = useState({})
+    useEffect(() => {
+        fetch('/homepageServices.json')
+            .then(res => res.json())
+            .then(data => setServices(data))
+    }, [])
 
+
+    useEffect(() => {
+        const found = services?.find(service => service?.id == id);
+        setSingleService(found)
+    }, [services, id])
     return (
         <div>
             <Header />
             <div className="container my-5">
                 <div>
+                    <h1>Service Details:</h1>
                     <div className="text-center">
-                        {!found ? <h2>{id} Can't load dynamic route onReload fake data, only show params data. agin reload page outsite private rout it's work </h2> : ''}
-                        <img className="img-fluid" src={found?.icon} alt="" style={{ height: "400px" }} />
+
+                        <img className="img-fluid" src={singleService?.icon} alt="" style={{ height: "400px" }} />
                     </div>
                     <h1>{serviceName}</h1>
-                    <p>{found?.description}</p>
+                    <p>{singleService?.description}</p>
                 </div>
             </div>
             <Footer />

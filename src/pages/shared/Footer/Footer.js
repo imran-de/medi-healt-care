@@ -12,7 +12,7 @@ const Footer = () => {
                     {/* <!-- Col-1 --> */}
                     <div className="col-md-3">
                         {/* <!-- Col Title --> */}
-                        <h2 className="">
+                        <h2 className="text-center text-lg-start mt-5 mt-lg-0">
                             Get In Touch
                         </h2>
 
@@ -27,7 +27,7 @@ const Footer = () => {
                     {/* <!-- Col-2 --> */}
                     <div className="col-md-3">
                         {/* <!-- Col Title --> */}
-                        <h2 className="">
+                        <h2 className="text-center text-lg-start mt-5 mt-lg-0">
                             Quick Links
                         </h2>
 
@@ -53,7 +53,7 @@ const Footer = () => {
                     {/* <!-- Col-3 --> */}
                     <div className="col-md-3">
                         {/* <!-- Col Title --> */}
-                        <h2 className="">
+                        <h2 className="text-center text-lg-start mt-5 mt-lg-0">
                             News
                         </h2>
 
@@ -72,7 +72,7 @@ const Footer = () => {
                     {/* <!-- Col-3 --> */}
                     <div className="col-md-3">
                         {/* <!-- Col Title --> */}
-                        <h2 className="">
+                        <h2 className="text-center text-lg-start mt-5 mt-lg-0">
                             Download Apps
                         </h2>
                         <div className="pt-4 text-center">
@@ -85,13 +85,13 @@ const Footer = () => {
 
                 {/* <!-- Copyright Bar --> */}
                 <div className="pt-2">
-                    <div className="">
+                    <div className="text-center text-lg-left">
                         <div className="mt-2">
                             ©Medi-health Care Copyright 1996-2021. All Rights Reserved. Developed by <span className="text-info">S Imran Ahmed ST</span>
                         </div>
 
                         {/* <!-- Required Un icons (if you want) --> */}
-                        <div className="mt-3">
+                        <div className="mt-3 text-center">
                             <a href="#home" className="w-6 mx-1">
                                 <i className="uil uil-facebook-f"></i>
                             </a>

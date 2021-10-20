@@ -50,7 +50,7 @@ const WhyChooseUs = () => {
                         </Accordion.Item>
                     </Accordion>
                 </div>
-                <div className="col-md-6">
+                <div className="col-md-6 mt-5 mt-lg-0">
                     <img className="img-fluid" src="https://pcaedu.in/wp-content/uploads/2019/09/why-us-800x400.jpg" alt="" />
                 </div>
             </div>

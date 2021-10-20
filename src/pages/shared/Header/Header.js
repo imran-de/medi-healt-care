@@ -10,7 +10,7 @@ const Header = () => {
 
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
                 <Container>
-                    <Navbar.Brand as={Link} to="/">Medi-health Care</Navbar.Brand>
+                    <Navbar.Brand as={Link} to="/">Medi-Health Care</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="mx-auto">
@@ -18,14 +18,14 @@ const Header = () => {
                             <Nav.Link as={Link} to="/services">Services</Nav.Link>
                             <Nav.Link as={Link} to="/about">About</Nav.Link>
                             <Nav.Link as={Link} to="/contact-us">Contact Us</Nav.Link>
-                            <Nav.Link as={Link} to="/">Dashboard</Nav.Link>
+                            <Nav.Link as={Link} to="/doctor's">Doctor's</Nav.Link>
                             {user?.displayName && <Nav.Link as={Link} className="hover:text-gray-200" to="/login" onClick={logOut}>LogOut</Nav.Link>
                             }
                             {
-                                !user.displayName && <Nav.Link as={Link} className="hover:text-gray-200" to="/login">Login</Nav.Link>
+                                !user?.displayName && <Nav.Link as={Link} className="hover:text-gray-200" to="/login">Login</Nav.Link>
                             }
                             {
-                                !user.displayName && <Nav.Link as={Link} className="hover:text-gray-200" to="/registration">Register</Nav.Link>
+                                !user?.displayName && <Nav.Link as={Link} className="hover:text-gray-200" to="/registration">Register</Nav.Link>
                             }
 
                             {/* <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
@@ -38,10 +38,10 @@ const Header = () => {
                         </Nav>
                         <Nav className="align-items-center">
                             <Nav.Link as={Link} to={`/user/${user?.displayName}/Appointment`}>Appointment</Nav.Link>
-                            <Nav.Link as={Link} to={`/user/${user?.displayName}`}>{user.displayName}</Nav.Link>
-                            <Nav.Link as={Link} eventKey={2} to={`/user/${user.displayName}`}>
+                            <Nav.Link as={Link} to={`/user/${user?.displayName}`}>{user?.displayName}</Nav.Link>
+                            <Nav.Link as={Link} eventKey={2} to={`/user/${user?.displayName}`}>
                                 {/* conditional rendering */}
-                                {!user.displayName ? <i className="far fa-user"></i> :
+                                {!user?.displayName ? <i className="far fa-user"></i> :
                                     <img src={user?.photoURL} alt="profile" style={{ width: "60px", borderRadius: '50%' }} />}
                             </Nav.Link>
                         </Nav>

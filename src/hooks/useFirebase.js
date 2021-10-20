@@ -11,12 +11,7 @@ const useFirebase = () => {
     const [isLoading, setIsLoading] = useState(true)
     const [msg, setMsg] = useState('')
 
-    const [servicesData, setServicesData] = useState('')
-    useEffect(() => {
-        fetch('./homepageServices.json')
-            .then(res => res.json())
-            .then(data => setServicesData(data))
-    }, [])
+
     //Login user with google account
     const signInWithGoogle = () => {
         setIsLoading(true);
@@ -24,6 +19,7 @@ const useFirebase = () => {
         signInWithPopup(auth, provider)
             .then(result => {
                 setUser(result.user)
+                setMsg("LogIn Success!!!")
             }).catch(error => {
                 setMsg(error.message)
             }).finally(setIsLoading(false))
@@ -35,6 +31,7 @@ const useFirebase = () => {
         signInWithPopup(auth, provider)
             .then(result => {
                 setUser(result.user)
+                setMsg("LogIn Success!!!")
             }).catch(error => {
                 setMsg(error.message)
             }).finally(setIsLoading(false))
@@ -47,6 +44,7 @@ const useFirebase = () => {
         signInWithPopup(auth, provider)
             .then(result => {
                 setUser(result.user)
+                setMsg("LogIn Success!!!")
             }).catch(error => {
                 setMsg(error.message)
             }).finally(setIsLoading(false))
@@ -111,10 +109,8 @@ const useFirebase = () => {
         })
         return () => unsubscribed;
     }, [])
-
     return {
 
-        servicesData,
         user,
         isLoading,
         msg,

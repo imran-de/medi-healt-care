@@ -12,6 +12,7 @@ import Profile from './pages/Admin/Profile/Profile';
 import Appointment from './pages/Admin/Appointment/Appointment';
 import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
+import AllDoctors from './pages/Doctor/AllDoctors';
 
 function App() {
   return (
@@ -43,8 +44,8 @@ function App() {
             <PrivateRoute exact path="/user/:userName/Appointment">
               <Appointment></Appointment>
             </PrivateRoute>
-            <Route path="/about-us">
-
+            <Route path="/doctor's">
+              <AllDoctors></AllDoctors>
             </Route>
             <Route path="/about">
               <About></About>

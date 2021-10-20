@@ -1,0 +1,13 @@
+.card-hover,.card-hover img{
+    transition: all 2s;
+    overflow: hidden;
+}
+.card-hover:hover{
+    background-color: rgba(222, 184, 135, 0.193);
+    color: cadetblue;
+    box-shadow: 40px 440px red;
+}
+
+.card-hover:hover img{
+    transform: scale(1.1);
+}
