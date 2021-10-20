@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory, useLocation } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import Footer from '../../shared/Footer/Footer';
 import Header from '../../shared/Header/Header';
@@ -8,11 +8,16 @@ import { useForm } from "react-hook-form";
 
 const Registration = () => {
 
+    const history = useHistory();
     const { signInWithGoogle, signInWithFacebook, signInWithGit, makeUserWithEmailAndPassword, msg } = useAuth();
+
+    const location = useLocation();
+    //catch private route redirect page url
+    const redirect_uri = location.state?.from || '/services';
 
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
-        makeUserWithEmailAndPassword(data)
+        makeUserWithEmailAndPassword(data.email, data.pass1, data.fullName, history, redirect_uri)
     };
     return (
         <div className="font-mono">
@@ -105,15 +110,15 @@ const Registration = () => {
                                     <h3>OR</h3>
                                 </div>
                                 <div className="d-flex justify-content-center gap-2">
-                                    <button onClick={signInWithGoogle} className="d-block btn btn-outline-danger">
+                                    <button onClick={() => signInWithGoogle(history, redirect_uri)} className="d-block btn btn-outline-danger">
                                         <i className="fab fa-google pe-3"></i>
                                         Sign-in with Google
                                     </button>
-                                    <button onClick={signInWithFacebook} className="d-block btn btn-outline-primary">
+                                    <button onClick={() => signInWithFacebook(history, redirect_uri)} className="d-block btn btn-outline-primary">
                                         <i className="fab fa-facebook-square pe-3"></i>
                                         Sign-in with Facebook
                                     </button>
-                                    <button onClick={signInWithGit} className="d-block btn btn-outline-dark">
+                                    <button onClick={() => signInWithGit(history, redirect_uri)} className="d-block btn btn-outline-dark">
                                         <i className="fab fa-github pe-3"></i>
                                         Sign-in with Github
                                     </button>

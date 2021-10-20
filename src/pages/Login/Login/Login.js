@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory, useLocation } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import Footer from '../../shared/Footer/Footer';
 import Header from '../../shared/Header/Header';
@@ -7,13 +7,18 @@ import Header from '../../shared/Header/Header';
 import { useForm } from "react-hook-form";
 
 const Login = () => {
-    const { signInWithGoogle, signInWithFacebook, signInWithGit, msg, logInWithEmailAndPassword, user } = useAuth();
+    const history = useHistory();
+    const { signInWithGoogle, signInWithFacebook, signInWithGit, msg, logInWithEmailAndPassword } = useAuth();
     const { register, handleSubmit, formState: { errors } } = useForm();
+    const location = useLocation();
+    //catch private route redirect page url
+    const redirect_uri = location.state?.from || '/services';
+    // handle email password login
     const onSubmit = data => {
-        logInWithEmailAndPassword(data)
-        console.log(data);
+        logInWithEmailAndPassword(data.email, data.pass, history, redirect_uri);
     };
-    console.log(user);
+
+
     return (
         <div>
             <Header></Header>
@@ -30,7 +35,7 @@ const Login = () => {
                             <h2 className='text-danger'>{msg}</h2>
                             <div className="form-floating mb-3">
                                 <input
-                                    id="floatingInput"
+                                    id="floatingInput1"
                                     className="form-control"
                                     placeholder="Email address"
                                     type="email"
@@ -40,7 +45,7 @@ const Login = () => {
                             </div>
                             <div className="form-floating mb-3">
                                 <input
-                                    id="floatingInput"
+                                    id="floatingInput2"
                                     className="form-control"
                                     placeholder="Password"
                                     type="password"
@@ -65,15 +70,15 @@ const Login = () => {
                                 <h3>OR</h3>
                             </div>
                             <div className="d-flex justify-content-center gap-2">
-                                <button onClick={signInWithGoogle} className="d-block btn btn-outline-danger">
+                                <button onClick={() => signInWithGoogle(history, redirect_uri)} className="d-block btn btn-outline-danger">
                                     <i className="fab fa-google pe-3"></i>
                                     Sign-in with Google
                                 </button>
-                                <button onClick={signInWithFacebook} className="d-block btn btn-outline-primary">
+                                <button onClick={() => signInWithFacebook(history, redirect_uri)} className="d-block btn btn-outline-primary">
                                     <i className="fab fa-facebook-square pe-3"></i>
                                     Sign-in with Facebook
                                 </button>
-                                <button onClick={signInWithGit} className="d-block btn btn-outline-dark">
+                                <button onClick={() => signInWithGit(history, redirect_uri)} className="d-block btn btn-outline-dark">
                                     <i className="fab fa-github pe-3"></i>
                                     Sign-in with Github
                                 </button>

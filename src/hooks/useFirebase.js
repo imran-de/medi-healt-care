@@ -5,6 +5,7 @@ import { getAuth, signInWithPopup, onAuthStateChanged, GoogleAuthProvider, creat
 //initialize firebase authentication
 initialAuthentication()
 const auth = getAuth();
+
 // handle all firebase login logout function
 const useFirebase = () => {
     const [user, setUser] = useState({})
@@ -13,38 +14,45 @@ const useFirebase = () => {
 
 
     //Login user with google account
-    const signInWithGoogle = () => {
+    const signInWithGoogle = (history, redirect_uri) => {
         setIsLoading(true);
         const provider = new GoogleAuthProvider()
-        signInWithPopup(auth, provider)
+        return signInWithPopup(auth, provider)
             .then(result => {
                 setUser(result.user)
                 setMsg("LogIn Success!!!")
+                //success login than redirect previous page
+                redirectUrl(history, redirect_uri)
             }).catch(error => {
                 setMsg(error.message)
             }).finally(setIsLoading(false))
     }
+
     //sign in with facebook
-    const signInWithFacebook = () => {
+    const signInWithFacebook = (history, redirect_uri) => {
         setIsLoading(true);
         const provider = new FacebookAuthProvider();
         signInWithPopup(auth, provider)
             .then(result => {
                 setUser(result.user)
                 setMsg("LogIn Success!!!")
+                //success login redirect previous page
+                redirectUrl(history, redirect_uri)
             }).catch(error => {
                 setMsg(error.message)
             }).finally(setIsLoading(false))
     }
 
     //sign in with GitHub
-    const signInWithGit = () => {
+    const signInWithGit = (history, redirect_uri) => {
         setIsLoading(true);
         const provider = new GithubAuthProvider()
         signInWithPopup(auth, provider)
             .then(result => {
                 setUser(result.user)
                 setMsg("LogIn Success!!!")
+                //success login than redirect previous page
+                redirectUrl(history, redirect_uri)
             }).catch(error => {
                 setMsg(error.message)
             }).finally(setIsLoading(false))
@@ -52,12 +60,13 @@ const useFirebase = () => {
 
 
     // using email and password create new user
-    const makeUserWithEmailAndPassword = ({ email, pass1, fullName }) => {
+    const makeUserWithEmailAndPassword = (email, pass1, fullName, history, redirect_uri) => {
         setIsLoading(true)
         createUserWithEmailAndPassword(auth, email, pass1)
             .then(result => {
                 setName();
                 setUser(result.user)
+                redirectUrl(history, redirect_uri)
             }).catch(error => {
                 setMsg(error.message)
             }).finally(setIsLoading(false))
@@ -73,15 +82,21 @@ const useFirebase = () => {
 
 
     //Login with email and password
-    const logInWithEmailAndPassword = ({ email, pass }) => {
+    const logInWithEmailAndPassword = (email, pass, history, redirect_uri) => {
         setIsLoading(true)
         signInWithEmailAndPassword(auth, email, pass)
             .then(result => {
                 setUser(result.user)
                 setMsg("LogIn Success!!!")
+                redirectUrl(history, redirect_uri)
             }).catch(error => {
                 setMsg(error.message)
             }).finally(setIsLoading(false))
+    }
+
+    //redirect function 
+    const redirectUrl = (history, url) => {
+        history.push(url)
     }
 
     //LogOut user
